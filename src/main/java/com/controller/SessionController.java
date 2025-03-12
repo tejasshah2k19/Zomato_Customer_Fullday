@@ -54,7 +54,12 @@ public class SessionController {
 		//
 		// get all restaurant from restaurant service
 
-		String str = webClient.get().uri("http://localhost:9877/restaurants") // Replace with actual URL
+//		String str = webClient.get().uri("http://localhost:9877/restaurants") // Replace with actual URL
+//				.retrieve().bodyToMono(String.class) // Change to required response type
+//				.block();
+//		System.out.println(str);
+
+		String str = webClient.get().uri("http://ZOMATO_RESTAURANT_SERVICE/restaurants") // Replace with actual URL
 				.retrieve().bodyToMono(String.class) // Change to required response type
 				.block();
 		System.out.println(str);
